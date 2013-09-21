@@ -1,34 +1,22 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Data;
-using Highway.Data;
-
+﻿using System.Configuration;
 using Machine.Specifications;
+using ProvenStyle.DatabaseManager;
 
 namespace DataIntegrationTests
 {
     [Subject("Creating a database")]
-    public class spec
+    public class can_create_a_database_without_a_reference_to_entity_framework
     {
-        private static DataContext _dataContext;
+        private static DatabaseCreator _databaseCreator;
 
         private Establish establish = () =>
             {
                 var connectionString = ConfigurationManager.ConnectionStrings["DataIntegrationTests"].ConnectionString;
-                IMappingConfiguration mapping = new DataMappingConfiguration();
-                 _dataContext = new DataContext(connectionString, mapping);
-                var repository = new Repository(_dataContext);
-                _dataContext = repository.Context as DataContext;
-                if (_dataContext.Database.Exists())
-                    _dataContext.Database.Delete();
+                _databaseCreator = new DatabaseCreator(connectionString);
             };
 
-        private Because of = () => _dataContext.Database.Create();
+        private Because of_creating_the_database = () => _databaseCreator.DropCreateDatabase();
 
-        private It should = () => _dataContext.Database.Exists().ShouldBeTrue();
+        private It database_should_exist = () => _databaseCreator.DatabaseExists().ShouldBeTrue();
     }
 }
