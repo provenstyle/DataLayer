@@ -33,7 +33,12 @@ namespace ProvenStyle.DatabaseManager
             return CreateDataContext().Database.Exists();
         }
 
-        private DataContext CreateDataContext()
+        public IRepository GetRepository()
+        {
+            return new Repository(CreateDataContext());
+        }
+
+        public DataContext CreateDataContext()
         {
             IMappingConfiguration mapping = new DataMappingConfiguration();
             var _dataContext = new DataContext(_connectionString, mapping);

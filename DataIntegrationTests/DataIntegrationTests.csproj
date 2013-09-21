@@ -63,7 +63,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConnectionString.cs" />
     <Compile Include="describe_creating_database.cs" />
+    <Compile Include="describe_saving_and_retrieving_data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +80,10 @@
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{da1c511f-a053-4e2b-9e64-cecdcaa7e25d}</Project>
       <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{6ee3b8ef-6218-49a5-ad09-c2e31103c00f}</Project>
+      <Name>Entities</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

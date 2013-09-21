@@ -8,7 +8,7 @@ namespace ProvenStyle.ConsoleApplication
     {
         static void Main(string[] args)
         {
-            var cn = ConfigurationManager.ConnectionStrings["ConsoleApplication"].ConnectionString;
+            var cn = ConfigurationManager.ConnectionStrings["DataLayer"].ConnectionString;
             var manager = new DatabaseCreator(cn);
             manager.DropCreateDatabase();
             Console.WriteLine("Database exists: {0}", cn);

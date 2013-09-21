@@ -53,6 +53,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
@@ -62,10 +63,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataInstaller.cs" />
+    <Compile Include="IRepositoryFactory.cs" />
     <Compile Include="Mappings\DataMappingConfiguration.cs" />
     <Compile Include="Mappings\PersonMapping.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Queries\PeopleByFirstName.cs" />
+    <Compile Include="RepositoryFactoryExtensions.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

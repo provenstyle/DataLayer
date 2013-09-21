@@ -9,14 +9,10 @@ namespace ProvenStyle.DataIntegrationTests
     {
         private static DatabaseCreator _databaseCreator;
 
-        private Establish establish = () =>
-            {
-                var connectionString = ConfigurationManager.ConnectionStrings["DataIntegrationTests"].ConnectionString;
-                _databaseCreator = new DatabaseCreator(connectionString);
-            };
+        private Establish context = () => _databaseCreator = new DatabaseCreator(ConnectionString.GetConnectionString());
 
         private Because of_creating_the_database = () => _databaseCreator.DropCreateDatabase();
 
-        private It database_should_exist = () => _databaseCreator.DatabaseExists().ShouldBeTrue();
+        private It should_create_the_database = () => _databaseCreator.DatabaseExists().ShouldBeTrue();
     }
 }
