@@ -1,5 +1,5 @@
 ﻿using System.Data.Entity.ModelConfiguration;
-using Entities;
+using ProvenStyle.Entities;
 
 namespace Data
 {

@@ -1,10 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Data;
-using Entities;
 using Machine.Specifications;
+using ProvenStyle.Data;
+using ProvenStyle.Entities;
 
-namespace DataTests
+namespace ProvenStyle.DataTests
 {
     [Subject("Querying the Person table")]
     public class when_querying_by_first_name : with_mock_data

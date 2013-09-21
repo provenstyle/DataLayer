@@ -7,8 +7,8 @@
     <ProjectGuid>{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConcreteImplementation</RootNamespace>
-    <AssemblyName>ConcreteImplementation</AssemblyName>
+    <RootNamespace>ProvenStyle.ConsoleApplication</RootNamespace>
+    <AssemblyName>ProvenStyle.ConsoleApplication</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -56,7 +56,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DatabaseCreator\DatabaseManager.csproj">
+    <ProjectReference Include="..\DatabaseManager\DatabaseManager.csproj">
       <Project>{3505dcd0-c41f-4b39-96b7-f5c06f44fa76}</Project>
       <Name>DatabaseManager</Name>
     </ProjectReference>

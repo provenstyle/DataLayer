@@ -7,8 +7,8 @@
     <ProjectGuid>{DA1C511F-A053-4E2B-9E64-CECDCAA7E25D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Data</RootNamespace>
-    <AssemblyName>Data</AssemblyName>
+    <RootNamespace>ProvenStyle.Data</RootNamespace>
+    <AssemblyName>ProvenStyle.Data</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

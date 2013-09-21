@@ -7,7 +7,7 @@
     <ProjectGuid>{3505DCD0-C41F-4B39-96B7-F5C06F44FA76}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Provenstyle.DatabaseManager</RootNamespace>
+    <RootNamespace>ProvenStyle.DatabaseManager</RootNamespace>
     <AssemblyName>ProveStyle.DatabaseManager</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

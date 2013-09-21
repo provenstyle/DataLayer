@@ -1,13 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Highway.Data;
 using Machine.Specifications;
 using Moq;
 
-namespace DataTests
+namespace ProvenStyle.DataTests
 {
     public class with_mock_data
     {

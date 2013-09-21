@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Data.Entity;
+using Data;
 
-namespace Data
+namespace ProvenStyle.Data
 {
     public class DataMappingConfiguration : Highway.Data.IMappingConfiguration
     {

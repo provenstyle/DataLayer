@@ -7,8 +7,8 @@
     <ProjectGuid>{8AAF011C-68F4-4C07-9B6D-33D5A81DA466}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataIntegrationTests</RootNamespace>
-    <AssemblyName>DataIntegrationTests</AssemblyName>
+    <RootNamespace>ProvenStyle.DataIntegrationTests</RootNamespace>
+    <AssemblyName>ProvenStyle.DataIntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -71,7 +71,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DatabaseCreator\DatabaseManager.csproj">
+    <ProjectReference Include="..\DatabaseManager\DatabaseManager.csproj">
       <Project>{3505dcd0-c41f-4b39-96b7-f5c06f44fa76}</Project>
       <Name>DatabaseManager</Name>
     </ProjectReference>

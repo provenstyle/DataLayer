@@ -2,7 +2,7 @@
 using Machine.Specifications;
 using ProvenStyle.DatabaseManager;
 
-namespace DataIntegrationTests
+namespace ProvenStyle.DataIntegrationTests
 {
     [Subject("Creating a database")]
     public class can_create_a_database_without_a_reference_to_entity_framework

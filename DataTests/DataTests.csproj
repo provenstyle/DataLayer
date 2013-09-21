@@ -7,8 +7,8 @@
     <ProjectGuid>{74A3B500-FF0D-4D0F-BE99-EAD4B613099B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DataTests</RootNamespace>
-    <AssemblyName>DataTests</AssemblyName>
+    <RootNamespace>ProvenStyle.DataTests</RootNamespace>
+    <AssemblyName>ProvenStyle.DataTests</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>

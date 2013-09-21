@@ -1,8 +1,8 @@
 ﻿using System.Linq;
-using Entities;
 using Highway.Data;
+using ProvenStyle.Entities;
 
-namespace Data
+namespace ProvenStyle.Data
 {
     public class PeopleByFirstName : Query<Person>
     {
