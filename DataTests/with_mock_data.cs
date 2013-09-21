@@ -16,6 +16,7 @@ namespace DataTests
 
         private Establish context = () =>
             {
+                DataContext = new Mock<IDataContext>();
                 Repository = new Repository(DataContext.Object);
             };
 

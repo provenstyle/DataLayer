@@ -57,7 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="describe_PeopleByFirstNameQuery.cs" />
+    <Compile Include="describe_querying_person_table.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="with_mock_data.cs" />
   </ItemGroup>
