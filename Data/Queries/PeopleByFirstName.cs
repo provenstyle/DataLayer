@@ -2,7 +2,7 @@
 using Entities;
 using Highway.Data;
 
-namespace Data.Queries
+namespace Data
 {
     public class PeopleByFirstName : Query<Person>
     {
