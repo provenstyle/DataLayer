@@ -1,4 +1,4 @@
 DataLayer
 =========
 
-My ideal data layer implementation
+A data layer implementation
