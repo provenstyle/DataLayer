@@ -62,7 +62,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContextFactory.cs" />
+    <Compile Include="DataContextFactory.cs" />
+    <Compile Include="MIgrationsDataContext.cs" />
+    <Compile Include="Migrations\201309220343249_InitialCreate.cs" />
+    <Compile Include="Migrations\201309220343249_InitialCreate.Designer.cs">
+      <DependentUpon>201309220343249_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201309220501041_updatingPerson.cs" />
+    <Compile Include="Migrations\201309220501041_updatingPerson.Designer.cs">
+      <DependentUpon>201309220501041_updatingPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,6 +84,14 @@
       <Project>{da1c511f-a053-4e2b-9e64-cecdcaa7e25d}</Project>
       <Name>Data</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201309220343249_InitialCreate.resx">
+      <DependentUpon>201309220343249_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201309220501041_updatingPerson.resx">
+      <DependentUpon>201309220501041_updatingPerson.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
