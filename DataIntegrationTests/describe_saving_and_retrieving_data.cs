@@ -19,7 +19,6 @@ namespace ProvenStyle.DataIntegrationTests
                 _manager = new DatabaseManager(Constants.ConnectionName);
                 _manager.DropCreateDatabase();
                 _repository = _manager.GetRepository();
-                
             };
 
         private Because of_adding_and_retrieving = () =>
