@@ -3,7 +3,6 @@ using System.Linq;
 using Highway.Data;
 using Machine.Specifications;
 using ProvenStyle.Data;
-using ProvenStyle.DatabaseManager;
 using ProvenStyle.Entities;
 
 namespace ProvenStyle.DataIntegrationTests
@@ -11,15 +10,15 @@ namespace ProvenStyle.DataIntegrationTests
     [Subject("Saving and retrieving data")]
     public class when_saving_and_retrieving_data
     {
-        private static DatabaseCreator _creator;
+        private static DatabaseManager _manager;
         private static IRepository _repository;
         private static List<Person> _people;
 
         private Establish establish = () =>
             {
-                _creator = new DatabaseCreator(ConnectionString.GetConnectionString());
-                _creator.DropCreateDatabase();
-                _repository = _creator.GetRepository();
+                _manager = new DatabaseManager(ConnectionString.GetConnectionString());
+                _manager.DropCreateDatabase();
+                _repository = _manager.GetRepository();
                 
             };
 

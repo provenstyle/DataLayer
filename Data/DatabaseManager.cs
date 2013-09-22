@@ -1,14 +1,12 @@
-﻿using Data;
-using Highway.Data;
-using ProvenStyle.Data;
+﻿using Highway.Data;
 
-namespace ProvenStyle.DatabaseManager
+namespace ProvenStyle.Data
 {
-    public class DatabaseCreator
+    public class DatabaseManager
     {
         private readonly string _connectionString;
 
-        public DatabaseCreator(string connectionString)
+        public DatabaseManager(string connectionString)
         {
             _connectionString = connectionString;
         }
