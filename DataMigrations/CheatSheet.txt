@@ -1,0 +1,4 @@
+﻿enable-migrations -StartUpProjectName
+add-migration
+update-database
+
