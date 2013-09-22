@@ -84,6 +84,10 @@
       <Project>{da1c511f-a053-4e2b-9e64-cecdcaa7e25d}</Project>
       <Name>Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Entities\Entities.csproj">
+      <Project>{6ee3b8ef-6218-49a5-ad09-c2e31103c00f}</Project>
+      <Name>Entities</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201309220343249_InitialCreate.resx">
