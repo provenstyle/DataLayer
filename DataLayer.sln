@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataIntegrationTests", "Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataMigrations", "DataMigrations\DataMigrations.csproj", "{E2A68D13-BD8B-4D46-A7A3-0CF1519A36BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A68D13-BD8B-4D46-A7A3-0CF1519A36BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A68D13-BD8B-4D46-A7A3-0CF1519A36BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A68D13-BD8B-4D46-A7A3-0CF1519A36BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A68D13-BD8B-4D46-A7A3-0CF1519A36BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
