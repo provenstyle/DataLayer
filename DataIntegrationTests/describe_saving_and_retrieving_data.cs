@@ -16,7 +16,7 @@ namespace ProvenStyle.DataIntegrationTests
 
         private Establish establish = () =>
             {
-                _manager = new DatabaseManager(ConnectionString.GetConnectionString());
+                _manager = new DatabaseManager(Constants.ConnectionName);
                 _manager.DropCreateDatabase();
                 _repository = _manager.GetRepository();
                 

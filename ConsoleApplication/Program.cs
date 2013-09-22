@@ -7,11 +7,10 @@ namespace ProvenStyle.ConsoleApplication
     class Program
     {
         static void Main(string[] args)
-        {
-            var cn = ConfigurationManager.ConnectionStrings["DataLayer"].ConnectionString;
-            var manager = new DatabaseManager(cn);
+        {            
+            var manager = new DatabaseManager("DataLayer");
             manager.DropCreateDatabase();
-            Console.WriteLine("Database exists: {0}", cn);
+            Console.WriteLine("Database exists: {0}", manager.ConnectionString);
         }
     }
 }

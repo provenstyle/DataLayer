@@ -11,11 +11,11 @@ namespace ProvenStyle.Data
     {
         public void SetUp(IWindsorContainer container, IConfigurationStore store)
         {
-            var cn = ConfigurationManager.ConnectionStrings["DataLayer"].ConnectionString;
+            var manager = new DatabaseManager("DataLayer");            
 
             container.Register(
                 Component.For<IMappingConfiguration>().ImplementedBy<DataMappingConfiguration>(),
-                Component.For<IDataContext>().ImplementedBy<DataContext>().DependsOn(new{connectionString = cn}).LifeStyle.Transient,
+                Component.For<IDataContext>().ImplementedBy<DataContext>().DependsOn(new{connectionString = manager.ConnectionString}).LifeStyle.Transient,
                 Component.For<IRepository>().ImplementedBy<Repository>().LifeStyle.Transient,    
                 Component.For<IRepositoryFactory>().AsFactory()                
              );

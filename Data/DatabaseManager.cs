@@ -1,29 +1,35 @@
-﻿using Highway.Data;
+﻿using System.Configuration;
+using Highway.Data;
 
 namespace ProvenStyle.Data
 {
     public class DatabaseManager
     {
-        private readonly string _connectionString;
+        private readonly string _connectionName;
 
-        public DatabaseManager(string connectionString)
+        public DatabaseManager(string connectionName)
         {
-            _connectionString = connectionString;
+            _connectionName = connectionName;
+        }
+
+        public string ConnectionString
+        {
+            get { return ConfigurationManager.ConnectionStrings[_connectionName].ConnectionString; }
         }
 
         public void DropCreateDatabase()
         {
-            var _dataContext = CreateDataContext();
-            if (_dataContext.Database.Exists())
-                _dataContext.Database.Delete();
-            _dataContext.Database.Create();
+            var dataContext = CreateDataContext();
+            if (dataContext.Database.Exists())
+                dataContext.Database.Delete();
+            dataContext.Database.Create();
         }
 
         public void CreateDatabaseIfNotExists()
         {
-            var _dataContext = CreateDataContext();
-            if (!_dataContext.Database.Exists())
-                _dataContext.Database.Create();
+            var dataContext = CreateDataContext();
+            if (!dataContext.Database.Exists())
+                dataContext.Database.Create();
         }
 
         public bool DatabaseExists()
@@ -39,8 +45,8 @@ namespace ProvenStyle.Data
         public DataContext CreateDataContext()
         {
             IMappingConfiguration mapping = new DataMappingConfiguration();
-            var _dataContext = new DataContext(_connectionString, mapping);
-            return _dataContext;
+            var dataContext = new DataContext(ConnectionString, mapping);
+            return dataContext;
         }
     }
 }

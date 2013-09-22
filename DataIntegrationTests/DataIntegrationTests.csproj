@@ -63,7 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ConnectionString.cs" />
+    <Compile Include="Constants.cs" />
     <Compile Include="describe_creating_database.cs" />
     <Compile Include="describe_saving_and_retrieving_data.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -73,10 +73,6 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DatabaseManager\DatabaseManager.csproj">
-      <Project>{3505dcd0-c41f-4b39-96b7-f5c06f44fa76}</Project>
-      <Name>DatabaseManager</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{da1c511f-a053-4e2b-9e64-cecdcaa7e25d}</Project>
       <Name>Data</Name>

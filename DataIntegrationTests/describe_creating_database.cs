@@ -9,7 +9,7 @@ namespace ProvenStyle.DataIntegrationTests
     {
         private static DatabaseManager _databaseManager;
 
-        private Establish context = () => _databaseManager = new DatabaseManager(ConnectionString.GetConnectionString());
+        private Establish context = () => _databaseManager = new DatabaseManager(Constants.ConnectionName);
 
         private Because of_creating_the_database = () => _databaseManager.DropCreateDatabase();
 

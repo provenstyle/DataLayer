@@ -9,8 +9,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTests", "DataTests\Data
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataIntegrationTests", "DataIntegrationTests\DataIntegrationTests.csproj", "{8AAF011C-68F4-4C07-9B6D-33D5A81DA466}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatabaseManager", "DatabaseManager\DatabaseManager.csproj", "{3505DCD0-C41F-4B39-96B7-F5C06F44FA76}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApplication", "ConsoleApplication\ConsoleApplication.csproj", "{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}"
 EndProject
 Global
@@ -35,10 +33,6 @@ Global
 		{8AAF011C-68F4-4C07-9B6D-33D5A81DA466}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8AAF011C-68F4-4C07-9B6D-33D5A81DA466}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8AAF011C-68F4-4C07-9B6D-33D5A81DA466}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3505DCD0-C41F-4B39-96B7-F5C06F44FA76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3505DCD0-C41F-4B39-96B7-F5C06F44FA76}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3505DCD0-C41F-4B39-96B7-F5C06F44FA76}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3505DCD0-C41F-4B39-96B7-F5C06F44FA76}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B81EAB05-8F0D-4CE1-BEF3-68559B5736D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
