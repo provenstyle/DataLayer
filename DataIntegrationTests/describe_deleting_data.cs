@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Machine.Specifications;
 using ProvenStyle.Data;
 using ProvenStyle.Data.Commands;
@@ -10,47 +7,67 @@ using ProvenStyle.Entities;
 
 namespace ProvenStyle.DataIntegrationTests
 {
+    // ReSharper disable InconsistentNaming
 
-   [Subject("Subject Deleteing Records")]
-   public class when_deleting_records : with_container
-   {
-      private static List<Person> _people;
-      private static Person _bob;
+    [Subject(Constants.DeletingRecords)]
+    public class when_deleting_records : with_delete
+    {                        
+        Because of = () =>
+           {
+               Factory.WithRepository(r => r.Execute(new DeletePerson(Bob.Id)));
 
-      private Establish context = () => Factory.WithRepository(r =>
-         {
-            _bob = new Person("Bob", "Wiley");
-            r.Context.Add(_bob);
-            r.Context.Commit();
-         });
+               Factory.WithRepository(r =>
+                  {
+                      People = r.Find(new PeopleByFirstName("Bob")).ToList();
+                  });
+           };
 
-      private Because of = () =>
-         {
-            Factory.WithRepository(r => r.Execute(new DeletePerson(_bob.Id)));
+        It should_delete_the_record = () => People.Count.ShouldEqual(0);
+    }
+
+    [Subject(Constants.DeletingRecords)]
+    public class when_deleting_record_that_does_not_exist : with_delete
+    {
+        Because of = () =>
+        {
+            Factory.WithRepository(r => r.Execute(new DeletePerson(10)));
 
             Factory.WithRepository(r =>
-               {
-                  _people = r.Find(new PeopleByFirstName("Bob")).ToList();
-               });
-         };
+            {
+                People = r.Find(new PeopleByFirstName("Bob")).ToList();
+            });
+        };
 
-      private It should_delete_the_record = () => _people.Count.ShouldEqual(0);
-   }
+        It should_not_throw_and_exception = () => People.Count.ShouldEqual(1);
+    }
 
-   public class when_deleting_record_that_does_not_exist : with_container
-   {
-      private static List<Person> _people;            
+    [Subject(Constants.DeletingRecords)]
+    public class when_deleting_using_an_advanced_command : with_delete
+    {        
+        Because of = () =>
+            {
+                Factory.WithRepository(r => r.Execute(new DeletePersonAdvancedCommand(Bob.Id)));
 
-      private Because of = () =>
-      {
-         Factory.WithRepository(r => r.Execute(new DeletePerson(1)));
+                Factory.WithRepository(r =>
+                    {
+                        People = r.Find(new PeopleByFirstName("Bob")).ToList();
+                    });
+                
+            };
 
-         Factory.WithRepository(r =>
-         {
-            _people = r.Find(new PeopleByFirstName("Bob")).ToList();
-         });
-      };
+        It should_delete_record = () => People.Count.ShouldEqual(0);
+    }
 
-      private It should_not_throw_and_exception = () => _people.Count.ShouldEqual(0);
-   }
+    public class with_delete : with_container
+    {
+        protected static List<Person> People;
+        protected static Person Bob;
+
+        Establish context = () => Factory.WithRepository(r =>
+        {
+            Bob = new Person("Bob", "Wiley");
+            r.Context.Add(Bob);
+            r.Context.Commit();
+        });
+    }
 }

@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Commands\DeletePerson.cs" />
+    <Compile Include="Commands\DeletePersonAdvancedCommand.cs" />
     <Compile Include="DatabaseManager.cs" />
     <Compile Include="DataInstaller.cs" />
     <Compile Include="IRepositoryFactory.cs" />
